@@ -1,0 +1,261 @@
+//  Copyright © 2020 teamrocket. All rights reserved.
+//
+// DATA
+import Foundation
+
+
+let format        = DateFormatter()
+//format.dateFormat = "yyyy-MM-dd"
+
+enum ContentType {
+    case news,test,solution,streamer // à compléter
+}
+
+struct Content {
+    var title : String
+    var content : String
+    var date : Date
+    var picture : String
+    var smallPicture : String
+    var latestNews : Bool
+    var type : ContentType
+}
+
+//spiderman valoran
+//League of legends
+//Pikachu
+var content1 = Content(title: "Valoran" , content: "Valorant, anciennement Project A, est un FPS tactique dans la veine de Counter Strike et de Team Fortress. Le jeu développé et édité par Riot Games proposera de nombreux personnages aux capacités uniques, différents modes de jeu et promet déjà des serveurs sans failles et un système anti-triche à la pointe de la technologie.", date: format.date(from: "2020-06-02")!, picture: "valoranPic1", smallPicture: "valoranPic2", latestNews: true, type: ContentType.news)
+
+var content2 = Content(title: "Skyyart" , content: "Skyyart Ranked Smurf Valorant avec vous & Tuto Viper (cheat now) + Theorycraft !! [New Planning: 11h à 15h & 18à 21h 7j/7", date: format.date(from: "2020-07-01")!, picture: "valoranPic1", smallPicture: "valoranPic2", latestNews: true, type: ContentType.streamer)
+
+var content3 = Content(title: "Spider-Man", content: "Spider-Man est un jeu d'action sur PlayStation 4. Le Tisseur est de retour pour le plaisir des joueurs qui pourront alterner phases d'exploration en voltigeant de building en building, phases d’infiltration et affrontements contre les super-vilains comme Le Caïd, Vulture, Electro, Mister Negative, etc.", date: format.date(from: "2018-09-07")!, picture: "spidermanPic1", smallPicture: "spidermanPic2", latestNews: true, type: ContentType.news)
+
+var content4 = Content(title: "League of Legends" , content: "En doutiez-vous vraiment ? League of Legends n’est pas là où il est aujourd’hui par hasard. Aussi jouissif à jouer qu’à regarder, aussi exigeant qu’enthousiasmant, Riot a mis toutes les chances de son côté pour pousser son jeu phare au sommet. Fort d’une direction artistique soignée et d’un pool de champions aussi stylé que bien conçu, LoL ne cesse de se perfectionner. On pourra lui reprocher des errements d’équilibrage par-ci par-là, mais la tâche s’avère d’une complexité sans nom. Les joueurs peuvent néanmoins compter sur un suivi d’exception pour être entendus et permettre au jeu de briller à tous les niveaux de compétition. S’il peut se montrer parfois ardu ou intimidant, il est cependant impossible de ne pas voir League of Legends pour ce qu’il est vraiment : un des plus grands jeux compétitifs de sa génération.", date: format.date(from: "2019-11-30")!, picture: "valoranContent1", smallPicture: "valoran", latestNews: true, type: ContentType.test)
+
+var content5 = Content(title: "Pokemon Official Twitch", content: "Official Twitch channel of The Pokémon Company International.", date: format.date(from: "2020-07-01")!, picture: "pokemonPic1", smallPicture: "pokemonPic2", latestNews: true, type: ContentType.streamer)
+
+var content6 = Content(title: "Final Fantasy VIII", content: "Le voici enfin, le chaînon manquant de l'opération fraîcheur de la série Final Fantasy. Après de nombreuses années à passer publiquement pour un vilain petit canard renié même par ses parents, après des portages en tout genre pour Final Fantasy I, II, III, IV, V, VI, VII, IX, X, et XII, Final Fantasy VIII a enfin lui aussi droit au traitement Remastered sur Switch, PC, PS4 et Xbox One. Il aura fallu pour ce faire le concours de deux studios, l'un français (Dotemu) et l'autre japonais (Access Games), venus prêter main forte à Square Enix dans la restauration de celui qui restera pour l'éternité le plus mielleux des FF de l'ère Squaresoft.", date: format.date(from: "2019-09-03")!, picture: "finalFantasyVIIIPic1", smallPicture: "finalFantasyVIIIPic2", latestNews: true, type: ContentType.test)
+
+var content7 = Content(title: "Final Fantasy VIII", content: "Bienvenue sur notre solution complète de Final Fantasy 8, un RPG culte de Square-Enix sorti à l'origine sur PlayStation et PC. Notre soluce de FF8 vous guide pas à pas jusqu'au bout de l'aventure. Notre guide complet de FF8 vous propose les solutions des énigmes, vous aide à trouver toutes les G-Force et à vaincre les boss ainsi qu'à obtenir toutes les magies. Avec notre soluce de Final Fantasy 8, vous verrez sans mal le dénouement des aventures éblouissantes et pleine d'émotion de Squall, Linoa, Quistis et tous les personnages haut en couleurs qui les accompagnent.", date: format.date(from: "2019-09-03")!, picture: "finalFantasyVIIIPic1", smallPicture: "finalFantasyVIIIPic2", latestNews: true, type: ContentType.solution)
+
+var content8 = Content(title: "The Legend Of Zelda", content: "The Legend of Zelda : Breath of the Wild est un jeu d'action/aventure. Link se réveille d'un sommeil de 100 ans dans un royaume d'Hyrule dévasté. Il lui faudra percer les mystères du passé et vaincre Ganon, le fléau. L'aventure prend place dans un gigantesque monde ouvert et accorde ainsi une part importante à l'exploration.", date: format.date(from: "2017-03-03")!, picture: "TheLegendOfZeldaPic1", smallPicture: "TheLegendOfZeldaPic2", latestNews: true, type: ContentType.news)
+
+var content9 = Content(title: "Star Wars Jedi Fallen Order", content: "Le joueur incarne un jeune Padawan cherchant à fuir l'Empire et la traque des derniers Jedi encore en vie, une chasse à l'homme menée par Darth Vader.", date: format.date(from: "2017-10-03")!, picture: "StarWarsJediFallenOrderPic1", smallPicture: "StarWarsJediFallenOrderPic2", latestNews: true, type: ContentType.news)
+
+
+var content10 = Content(title: "Mario Kart 8 Deluxe", content: "Mario Kart 8 sur Switch est un jeu de course coloré et délirant qui reprend les personnages phares des grandes licences Nintendo. Le joueur peut y affronter ses amis dans différents modes et types de coupes et a accès à 32 circuits aux environnements variés.", date: format.date(from: "2017-04-27")!, picture: "MarioKart8DeluxePic1", smallPicture: "MarioKart8DeluxePic2", latestNews: true, type: ContentType.test)
+
+var content11 = Content(title: "Chrono Trigger", content: "Chrono Trigger est un jeu de rôle mettant en scène le jeune Chrono dans ses aventures à travers le temps. Ce dernier part à la suite de la princesse, absorbée par le passé lors de la fête du Millénaire, et rencontrera de nombreux autres personnages au cours de ses aventures et devra affronter mille dangers...", date: format.date(from: "1995-03-11")!, picture: "ChronoTriggerPic1", smallPicture: "ChronoTriggerPic1", latestNews: true, type: ContentType.news)
+
+var content12 = Content(title: "Final Fantasy 6", content: "Final Fantasy VI est un jeu de rôle japonais à l'univers sombre. Dans cet épisode, la technologie Magitek a pris le pas sur la magie, 1000 ans après une grande guerre, et l'Empire règne d'une main de fer sur le monde. Le héros, Lock, dirige un groupe de rebelles, les Returners, et essaye de se retourner contre cette super-puissance.", date: format.date(from: "1994-04-02")!, picture: "FinalFantasy6Pic1", smallPicture: "FinalFantasy6Pic2", latestNews: true, type: ContentType.test)
+
+
+var content13 = Content(title: "Mass Effect", content: "Mass Effect est une série de jeux vidéo d'action-RPG se déroulant dans un univers de science-fiction et produite par BioWare.", date: format.date(from: "2007-11-20")!, picture: "massEffect1", smallPicture: "massEffect2", latestNews: true, type: ContentType.news)
+
+var content14 = Content(title: "tes: Skyrim", content: "Le jeu met le joueur dans la peau d'un inconnu, tout juste arrivé dans la contrée de Bordeciel (\"Skyrim\" en anglais, d'où le nom de l'opus), alors déchirée par une guerre civile qu'une invasion de dragons belliqueux ne fait qu'empirer. Le personnage incarné par le joueur s'avère en fait être le dernier « Enfant de Dragon » qui, ayant découvert ses pouvoirs, est le seul être capable de mettre fin au conflit qui ravage le pays et de vaincre les dragons, réveillés de sommeil millénaire par Alduin, le \"Dévoreur des Mondes\".", date: format.date(from: "2011-11-11")!, picture: "tesSkyrim1", smallPicture: "tesSkyrim2", latestNews: true, type: ContentType.news)
+
+var content15 = Content(title: "Assassin's Creed Origins", content: "Assassin's Creed Origins est un action RPG en monde ouvert incluant des mécaniques d'infiltration. Le titre vous fait visiter les terres mystérieuses de l'Egypte antique dans la peau de Bayek, nouveau héros d'un épisode nous dévoilant les origines de la création de la confrérie des assassins chère à la série phare d'Ubisoft.", date: format.date(from: "2017-10-03")!, picture: "AssassinsCreedOriginsPic1", smallPicture: "AssassinsCreedOriginsPic2", latestNews: true, type: ContentType.test)
+
+
+struct Game {
+    var title : String
+    var date : Date
+    var type : GameType
+    var contents : [Content]
+    var isFavorite : Bool
+    var smallPicture : String
+    var preference : [GamePreference]
+}
+
+
+enum GameType {
+    case RPG,FPS,AVENTURE,POINTANDCLICK, MMO, SurvivalHorror, actionRPG, RACING, MOBA //... à compléter
+}
+
+//var game1 = Game(title: "RED DEAD..", date: <#T##Date#>, type: , contents: <#T##[Content]#>, isFavorite: <#T##Bool#>, smallPicture: <#T##String#>, preference:[] )
+
+var game1 = Game(title: "Spider-Man", date: format.date(from: "2010-07-05")!, type: .AVENTURE, contents: [content3], isFavorite: false, smallPicture: "Spiderman", preference: [])
+var game2 = Game(title: "Valorant", date: format.date(from: "2020-06-02")!, type: .RPG, contents: [content1,content2], isFavorite: false, smallPicture: "Valorant", preference: [])
+var game3 = Game(title: "League Of Legends", date: format.date(from: "2009-10-27")!, type: .MOBA, contents: [content4], isFavorite: false, smallPicture: "LeagueOfLegends", preference: [])
+var game4 = Game(title: "Pokemon", date: format.date(from: "1998-09-12")!, type: .RPG, contents: [content5], isFavorite: false, smallPicture: "Pokemon", preference: [])
+var game5 = Game(title: "Final Fantasy VIII", date: format.date(from: "1999-02-11")!, type: .RPG, contents: [content6,content7], isFavorite: false, smallPicture: "FinalFantasyVIII", preference: [])
+var game6 = Game(title: "", date: format.date(from: "1999-02-11")!, type: .RPG, contents: [], isFavorite: false, smallPicture: "FinalFantasyVIII", preference: [])
+var game7 = Game(title: "The Legend Of Zelda", date: format.date(from: "2017-03-03")!, type: .AVENTURE, contents: [content8], isFavorite: false, smallPicture: "TheLegendOfZelda", preference: [])
+var game8 = Game(title: "Assassin's Creed Origins", date: format.date(from: "2017-10-03")!, type: .AVENTURE, contents: [], isFavorite: false, smallPicture: "AssassinsCreedOrigins", preference: [])
+var game9 = Game(title: "Star Wars Jedi Fallen Order", date: format.date(from: "2017-10-03")!, type: .AVENTURE, contents: [content9], isFavorite: false, smallPicture: "StarWarsJediFallenOrder", preference: [])
+var game10 = Game(title: "Mario Kart 8 Deluxe", date:  format.date(from: "2017-04-27")!, type: .RACING, contents: [content10], isFavorite: false, smallPicture: "MarioKart8Deluxe", preference: [])
+var game11 = Game(title: "Chrono Trigger", date: format.date(from: "1995-03-11")!, type: .RPG, contents: [content11], isFavorite: false, smallPicture: "chronoTrigger", preference: [])
+var game12 = Game(title: "Mass Effect", date: format.date(from: "2007-11-20")!, type: .actionRPG, contents: [content13], isFavorite: false, smallPicture: "massEffect", preference: [])
+var game13 = Game(title: "Final Fantasy 6", date: format.date(from: "1994-04-02")!, type: .RPG, contents: [content12], isFavorite: false, smallPicture: "finalFantasy6", preference: [])
+var game14 = Game(title: "TES:Skyrim", date: format.date(from: "2011-11-11")!, type: .actionRPG, contents: [content14], isFavorite: false, smallPicture: "tesSkyrim", preference: [])
+
+
+
+
+//struct Preference {
+//    var type : ContentType
+//    var isEnabled : Bool
+//    var icon : String
+//}
+
+struct GamePreference {
+    var supplier : ContentSupplier
+    var NotificationEnabled : Bool
+}
+
+enum ContentSupplier {
+    case Twitch, Twitter, Facebook, Youtube, JVCOM, Gamekult //... à compléter
+}
+
+//struct Collection {
+//    var myGames : [Game]
+//}
+
+// Main View
+import SwiftUI
+
+struct MainView: View {
+        @State var selection : Int = 1
+    
+    var body: some View {
+        TabView(selection: $selection) {
+            NewsView().tabItem {
+                Text("News")
+                Image(systemName:"cube.box")
+                
+            }.tag(1)
+            Text("Tab Content 2").tabItem {
+                Text("Tab Label 2")
+                Image(systemName:"gamecontroller")
+            }.tag(2)
+            
+            Text("Tab Content 3").tabItem {
+                Text("Tab Label 3")
+                Image(systemName:"dial")
+            }.tag(2)
+        }
+    }
+}
+
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
+}
+
+// News View
+import SwiftUI
+
+
+
+struct NewsView: View {
+
+    
+    var body: some View {
+        ZStack {
+            
+            
+            //Color(.gray)
+            LinearGradient(gradient: Gradient(colors:[Color(UIColor(named: "bgGray") ?? .gray) ,Color(UIColor(named: "bgWhite") ?? .white)]), startPoint: .top, endPoint: .bottom)
+            
+            VStack {
+                
+                
+                ScrollView(.horizontal) {
+                    ZStack {
+                       // LinearGradient(gradient: Gradient(colors:[.gray,.white]), startPoint: .leading, endPoint: .trailing).zIndex(0)
+                        Color(.blue).opacity(0.15)
+                        HStack {
+                            Image("Mario").resizable().frame(width: 100.0, height:100.0)
+                            Image("Pika").resizable().frame(width: 100.0, height:100.0)
+                            Image("LegendOfZelda").resizable().frame(width: 100.0, height:100.0)
+                            Image("Spidey").resizable().frame(width: 100.0, height:100.0)
+                            Image("FinalF").resizable().frame(width: 100.0, height:100.0)
+                            Image("Mario").resizable().frame(width: 100.0, height:100.0)
+                            Image("Mario").resizable().frame(width: 100.0, height:100.0)
+                        }
+                    }.frame(height:130)
+                    
+                }
+                
+                //Bloc content à la UNE
+                VStack {
+                    Text("Valorant").foregroundColor(.white)
+                    
+                Image("valoranPic1").resizable().frame(width: 280, height:200)
+
+                    Text("Valorant, anciennement Project A, est un FPS tactique dans la veine de Counter Strike et de Team Fortress. Le jeu développé et édité par Riot Games proposera de nombreux personnages aux capacités uniques, différents modes de jeu et promet déjà des serveurs sans failles et un système anti-triche à la pointe de la technologie.").foregroundColor(.white).padding(10)
+                    
+                                    Spacer()
+                }
+
+            }
+            
+            
+        }
+        
+    }
+}
+
+struct NewsView_Previews: PreviewProvider {
+    static var previews: some View {
+        NewsView()
+    }
+}
+ // Scene Delegate
+ mport UIKit
+import SwiftUI
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    var window: UIWindow?
+
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+
+        // Create the SwiftUI view that provides the window contents.
+        let contentView = MainView()
+
+        // Use a UIHostingController as window root view controller.
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = UIHostingController(rootView: contentView)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
+    }
+
+    func sceneDidDisconnect(_ scene: UIScene) {
+        // Called as the scene is being released by the system.
+        // This occurs shortly after the scene enters the background, or when its session is discarded.
+        // Release any resources associated with this scene that can be re-created the next time the scene connects.
+        // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+    }
+
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        // Called when the scene has moved from an inactive state to an active state.
+        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+    }
+
+    func sceneWillResignActive(_ scene: UIScene) {
+        // Called when the scene will move from an active state to an inactive state.
+        // This may occur due to temporary interruptions (ex. an incoming phone call).
+    }
+
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        // Called as the scene transitions from the background to the foreground.
+        // Use this method to undo the changes made on entering the background.
+    }
+
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        // Called as the scene transitions from the foreground to the background.
+        // Use this method to save data, release shared resources, and store enough scene-specific state information
+        // to restore the scene back to its current state.
+    }
+
+
+}
+
